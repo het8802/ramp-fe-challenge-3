@@ -178,16 +178,16 @@ _You need to fix some of the previous bugs in order to reproduce_
 
 1. Click on the **Filter by employee** select to open the options dropdown
 2. Select an employee from the list _(E.g. James Smith)_
-3. Toggle the first transaction _(E.g. Uncheck Social Media Ads Inc)_
+3. Toggle the checkbox of the first transaction _(E.g. Uncheck Social Media Ads Inc)_
 4. Click on the **Filter by employee** select to open the options dropdown
 5. Select **All Employees** option
 6. Verify values
 7. Click on the **Filter by employee** select to open the options dropdown
 8. Verify values
 
-**Expected:** In steps 6 and 8, toggled transaction kept the same value it was given in step 2 _(E.g. Social Media Ads Inc is unchecked)_
+**Expected:** In steps 6 and 8, toggled transaction checkbox kept the same value it was given in step 2 _(E.g. Social Media Ads Inc is unchecked)_
 
-**Actual:** In steps 6 and 8, toggled transaction lost the value given in step 2. _(E.g. Social Media Ads Inc is checked again)_
+**Actual:** In steps 6 and 8, toggled transaction lost the value of checkbox (checked/unchecked) given in step 2. _(E.g. Social Media Ads Inc is checked again)_
 
 ## Submission
 
