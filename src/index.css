@@ -81,6 +81,7 @@ hr.RampBreak--l {
 
 .RampInputSelect--root {
   width: 100%;
+  position: relative; /* Add this line */
 }
 
 .RampInputSelect--input {
@@ -92,14 +93,15 @@ hr.RampBreak--l {
 
 .RampInputSelect--dropdown-container {
   display: none;
-  position: fixed;
+  position: absolute; /* Change this from fixed to absolute */
   width: 100%;
-  max-width: 700px;
   border: 1px solid var(--color-darker-shade);
   margin-top: 0.5rem;
   max-height: 16rem;
   overflow: auto;
   box-shadow: rgb(0 0 0 / 10%) 0px 0px 1px, rgb(0 0 0 / 13%) 0px 4px 8px;
+  background-color: var(--color-empty-shade); /* Add this line for background color */
+  z-index: 10; /* Add this line to ensure the dropdown appears above other elements */
 }
 
 .RampInputSelect--dropdown-container-opened {

@@ -1,5 +1,5 @@
 import Downshift from "downshift"
-import { useCallback, useState } from "react"
+import { useCallback, useState, useEffect } from "react"
 import classNames from "classnames"
 import { DropdownPosition, GetDropdownPositionFn, InputSelectOnChange, InputSelectProps } from "./types"
 
@@ -30,6 +30,14 @@ export function InputSelect<TItem>({
     [consumerOnChange]
   )
 
+  const updateDropdownPosition = useCallback((target: HTMLElement) => {
+    const { height } = target.getBoundingClientRect()
+    setDropdownPosition({
+      top: height,
+      left: 0,
+    })
+  }, [])
+
   return (
     <Downshift<TItem>
       id="RampSelect"
@@ -59,7 +67,7 @@ export function InputSelect<TItem>({
             <div
               className="RampInputSelect--input"
               onClick={(event) => {
-                setDropdownPosition(getDropdownPosition(event.target))
+                updateDropdownPosition(event.currentTarget)
                 toggleProps.onClick(event)
               }}
             >
